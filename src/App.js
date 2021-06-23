@@ -6,13 +6,17 @@ import Greetings from "./Greetings"
 import Random from "./Random"
 import "bootstrap/dist/css/bootstrap.min.css"
 import BoxColor from './BoxColor'
+import Cards from "./Cards"
+
+import master from "./img/master-card.svg"
+import visa from  "./img/visa.png"
 
 
 function App() {
 
   let card = [
 {
-  type:"Visa",
+  type:visa,
   number:"0123456789018845",
   expirationMonth:3,
   expirationYear:2021,
@@ -21,7 +25,7 @@ function App() {
   bgColor:"#11aa99",
   color:"white" },
   {
-  type:"Master Card",
+  type:master,
   number:"0123456789010995",
   expirationMonth:3,
   expirationYear:2021,
@@ -30,7 +34,7 @@ function App() {
   bgColor:"#eeeeee",
   color:"#222222" },
 {
-  type:"Visa",
+  type:visa,
   number:"0123456789016984",
   expirationMonth:12,
   expirationYear:2019,
@@ -69,7 +73,7 @@ function App() {
 
             </header>
 
-            <div class="container">
+            <div class="container2">
   <div className="row">
    {arrIds.map((id)=>{
 return (
@@ -102,6 +106,30 @@ return (
 <BoxColor r={255} g={0} b={0} />
 <BoxColor r={128} g={255} b={0} />
 
+
+
+
+<div className="container">
+  <div className="row">
+   {card.map((cards)=>{
+return (
+     <Cards
+     type={cards.type}
+     number={cards.number}
+     expirationMonth={cards.expirationMonth}
+     expirationYear={cards.expirationYear}
+     bank={cards.bank}
+     owner={cards.owner}
+     bgColor={cards.bgColor}
+     color={cards.color}
+     />
+   );
+   })}
+
+   
+ 
+  </div>
+</div>
 
 
     </div>
