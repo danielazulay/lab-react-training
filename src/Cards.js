@@ -12,7 +12,7 @@ return (
 
 <div className="col" >
 
-<div className="cards" style={ {backgroundColor:`${props.bgColor}`,Color:`${props.Color}`}} >
+<div className="cards" style={ {backgroundColor:`${props.bgColor}`,color:`${props.color}`}} >
 <img className="typecard" src={props.type}/>
 <p className="numbercard">{props.number}</p>
 <p className="exp">{`Expire: ${props.expirationMonth }/${props.expirationYear}   ${props.bank} `}</p>
