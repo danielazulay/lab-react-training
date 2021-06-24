@@ -42,7 +42,7 @@ handlePicL = () => {
         return(
             <div className="carrosel">
 <button className="btn btn-primary" onClick={this.handlePicR }>Right</button>
-<img src={this.state.status}/>
+<img className="carroselImg" src={this.state.status}/>
 <button className="btn btn-primary" onClick={this.handlePicL }>Left</button>
 </div>
         )
