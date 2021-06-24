@@ -7,10 +7,12 @@ import Random from "./Random"
 import "bootstrap/dist/css/bootstrap.min.css"
 import BoxColor from './BoxColor'
 import Cards from "./Cards"
-
+import LikeButton from './LikeButton';
+import ClickablePicture from "./ClickablePicture"
 import master from "./img/master-card.svg"
 import visa from  "./img/visa.png"
-
+import Dice from "./Dice"
+import Carousel from "./Carousel"
 
 function App() {
 
@@ -131,6 +133,26 @@ return (
   </div>
 </div>
 
+
+
+<LikeButton /> <LikeButton />
+
+<ClickablePicture
+  img='/img/persons/maxence.png'
+  imgClicked='/img/persons/maxence-glasses.png'
+/>
+
+<Dice/>
+
+
+<Carousel
+  imgs={[
+    'https://randomuser.me/api/portraits/women/1.jpg',
+    'https://randomuser.me/api/portraits/men/1.jpg',
+    'https://randomuser.me/api/portraits/women/2.jpg',
+    'https://randomuser.me/api/portraits/men/2.jpg'
+  ]}
+/>
 
     </div>
   );
